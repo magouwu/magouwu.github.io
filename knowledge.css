@@ -1,0 +1,102 @@
+section
+{   margin:  0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column  ;
+    background-color: black;
+    z-index:0;
+}
+
+section .raw{
+    top: -90%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+    font-size: 3rem;
+    white-space: nowrap;
+    cursor: default;
+    transform:  rotate(-45deg);
+    z-index: 1;
+}
+
+i{
+    color: rgba(255, 255, 255,.5);
+    transition: .2s;
+    padding: 0 5px;
+    user-select: none;
+    z-index: 2;
+}
+
+i:hover{
+    color: #0f0;
+    box-shadow: 0 0 120px #0f0;
+}
+
+section .raw div{
+    animation: animaicon1 80s linear infinite;
+    animation-delay: -80s;
+}
+section .raw div:nth-child(2){
+    animation: animaicon2 80s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes animaicon1 {
+    0%{
+        transform: translateX(100%);
+    }    
+    100%{
+        transform: translate(-100%);
+    }
+}
+@keyframes animaicon2 {
+    0%{
+        transform: translateX(0%);
+    }    
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+section .raw:nth-child(even) div{
+    animation: animaicon3 80s linear infinite;
+    animation-delay: -80s;
+}
+section .raw:nth-child(even) div:nth-child(2){
+    animation: animaicon4 80s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes animaicon3 {
+    0%{
+        transform: translateX(-100%);
+    }    
+    100%{
+        transform: translate(100%);
+    }
+}
+@keyframes animaicon4 {
+    0%{
+        transform: translateX(-200%);
+    }    
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.solobox{
+    background: plum;
+    width: 50%;
+    height: 15%;
+    padding: auto;
+    position:absolute;
+    z-index: 10;
+    top: 50%;
+    margin-top: 50%;
+    margin-left: 25%;
+
+    
+}

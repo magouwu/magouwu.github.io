@@ -3,28 +3,33 @@
     --fs-600:2rem;
     --fs-400: 1rem;
 }
-@media(min-width:40em){
-    :root{
-        --fs-600:3rem;
-        --fs-400: 1.125rem;
-    }
+.header-container{
+    margin: 40vh 1vw;
+    font-size: 3rem;
+
+}
+@media(min-width:390px){
+ .header-container{
+     font-size: calc(1vw);
+ }
 }
 
 
 #particles-js{
-    height: 60%;
+    height: 100vh;
     width: 100%;
     position:relative;
 
 }
+
+
 .presn{
     font-family: 'Oswald', sans-serif;
 }
 
 .omg{
-    padding: 0;
-    margin: 0;
     position: absolute;
+
 }
 .xd{
     text-align: left;
@@ -133,8 +138,7 @@ position: absolute;
 .container-contact{ 
     max-width: 30%;
     max-height: 10%;
-    margin: auto;
-    margin-top: 60px;
+    height: 100%;
     border-radius: 8px;
     background-color: #fff;
     border-style: outset;
@@ -165,17 +169,29 @@ position: absolute;
     opacity: .5;
 
 }
+.dropdown:hover>.dropdown-menu{
+    display:block;
+}
 
+.caja-login{
+    width: 70%;
+    margin: 5rem 0;
+    border: solid 2px black;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
+.logo{
+    font-family: 'Berkshire Swash', cursive;
+    color: black;
+}
 #content{
     margin-top: 56px;
 }
 #caja{
-    max-width: 300px;
-    border-radius: 8px;
-    background-color: #fff;
-    border-style: outset;
-    border-color: #ccc;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+position: relative;
+
 }
 
 #header{
@@ -216,45 +232,39 @@ border-bottom: solid 1px black;
 background-color: #746AB0;
 
 }
-/*
+
 input[type=text] {
-    width: 80%;
-    padding: 12px 20px;
-    margin: auto;
+    width: 100%;
     display: block;
     border: solid 1px #ccc;
     border-radius: 3px;
     box-sizing: border-box;
 }*/
 
-/*
+
 input[type=email] {
-    width: 80%;;
-    padding: 12px 20px;
-    margin: auto;
     display: block;
     border: solid 1px #ccc;
     border-radius: 3px;
     box-sizing: border-box;
-}*/
+}
 
-input[type=submit]{
+.boton{
     width: 80%;
-   /* background-color: #4CAF50;
-    color: white;
-    padding: 14x 20px*/
-    margin-left: 10%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 14x 20px;
+    margin-top: 200px;
     border: solid 2px black;
     display: block;
     border-radius: 4px;
     cursor: pointer;
 }
+.boton:hover{
+    background-color: #009929;
+    color: white;
+}
 
 label{
     font-family: 'Montserrat', sans-serif;
-    margin: auto;
 }
 
 textarea{

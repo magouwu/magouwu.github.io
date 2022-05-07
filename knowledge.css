@@ -9,10 +9,11 @@ section
     flex-direction: column  ;
     background-color: black;
     z-index:0;
+    white-space: nowrap;
 }
 
 section .raw{
-    top: -90%;
+    top: -800px;
     position: relative;
     width: 100%;
     display: flex;
@@ -30,6 +31,7 @@ i{
     padding: 0 5px;
     user-select: none;
     z-index: 2;
+    white-space: nowrap;
 }
 
 i:hover{
@@ -87,16 +89,81 @@ section .raw:nth-child(even) div:nth-child(2){
     }
 }
 
-.solobox{
-    background: plum;
-    width: 50%;
-    height: 15%;
-    padding: auto;
+#popup-container{
+    width: 10vh;
+    height: 8vh;
     position:absolute;
     z-index: 10;
-    top: 50%;
-    margin-top: 50%;
-    margin-left: 25%;
+   top: 150vh;
+   left: 46vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vh;
+}
 
+.popup-wn{
+    height: 111vh;
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    left: 0px;
+    color: solid black;
+    background: rgba(0,0,0,.8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+
+}
+.popup-wn:target{
+    background: rgba(0, 0, 0, .8);
+    opacity: 1;
+    visibility: visible;
+    text-decoration: none;
+}
+
+
+.popup{
     
+    width: 250px;
+    height: 350px;
+    margin-top: 20vh;
+    background: linear-gradient(to bottom, #ff0000, #F0743C) ;
+}
+.img{
+    width: 250px;
+    height: 250px;
+    color: white;
+    border-radius: 50%;
+    background-image: url("img/yo.jpg");
+    background-size: cover;
+    z-index: 120;
+}
+
+.ntli{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icolor{
+    padding: 10px;
+    color: white;
+}
+.networks{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+.duwul{
+    text-align: right;
+    text-decoration: none;
+}
+.lwuw{
+    text-align: left;
+    text-decoration: none;
 }

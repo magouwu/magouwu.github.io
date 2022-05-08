@@ -132,6 +132,9 @@ background: linear-gradient(to right, #1E4867, #529AD5);
 color: #eee;
 z-index: 10;
 position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 

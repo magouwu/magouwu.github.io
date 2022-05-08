@@ -1,7 +1,21 @@
-const remainingCharsText = document.getElementById('counter')
-const myTextArea = document.getElementById('mytextarea')
+const remainingCharsText = document.getElementById('counter');
+const myTextArea = document.getElementById('mytextarea');
 const MAX_CHARS = 150;
- 
+var abrirMas = document.getElementById('popup-container');
+var mode = document.getElementById('mode');
+var close = document.getElementById('closebtn');
+
+abrirMas.addEventListener('click',function(){
+  console.log("boton picado");
+  mode.classList.toggle('display-active');
+  
+});
+
+close.addEventListener('click',function(){
+  console.log('boton cerrar picado');
+  mode.classList.toggle('display-active');
+});
+
 myTextArea.addEventListener('input', function(e) {
   const remaining = MAX_CHARS - myTextArea.value.length;
   remainingCharsText.textContent=remaining;
@@ -17,20 +31,3 @@ myTextArea.addEventListener('input', function(e) {
   }
 
 });
-/*
-myTextArea.addEventListener('keydown', function(e){
-  const remaining = MAX_CHARS - myTextArea.value.length;
-  remainingCharsText.textContent=remaining;
-
-if (remaining <= 0 && e.key !== 'Backspace' || remaining === 150 && e.key === 'Backspace') {
-  e.preventDefault();
-  return;
-}
-if (e.key === 'Backspace') {
-  remaining = remaining + 1;
-  remainingCharsText.innerHTML = remaining;
-} else {
-  remaining = remaining - 1;
-  remainingCharsText.innerHTML = remaining;
-}
-});*/

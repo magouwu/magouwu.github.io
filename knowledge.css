@@ -99,41 +99,38 @@ section .raw:nth-child(even) div:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1vh;
+    border-radius: 10px;
 }
 
 .popup-wn{
-    height: 111vh;
-    width: 100%;
-    position: absolute;
-    top: 100vh;
-    left: 0px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     color: solid black;
     background: rgba(0,0,0,.8);
-    z-index: 100;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    visibility: hidden;
+    display: flex;
+    z-index: 1100;
+}
+
+.display-active{
     opacity: 0;
     transition: all 600ms;
-
-}
-.popup-wn:target{
-    background: rgba(0, 0, 0, .8);
-    opacity: 1;
-    visibility: visible;
-    text-decoration: none;
+    visibility: hidden;
 }
 
 
 .popup{
-    
+    position: relative;
     width: 250px;
     height: 350px;
-    margin-top: 20vh;
     background: linear-gradient(to bottom, #ff0000, #F0743C) ;
+    border-radius: 20px;
+
 }
 .img{
     width: 250px;
@@ -143,8 +140,28 @@ section .raw:nth-child(even) div:nth-child(2){
     background-image: url("img/yo.jpg");
     background-size: cover;
     z-index: 120;
+    border: solid 10px black;
 }
+.btn-popup-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color: gray;
+    text-decoration: none;
 
+}
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+}
+.btn-popup-close:hover{
+    color: #ff0000
+}
 .ntli{
     display: flex;
     justify-content: center;

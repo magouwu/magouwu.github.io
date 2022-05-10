@@ -19,6 +19,8 @@ section {
   background-color: black;
   min-height: 100vh;
   width: 100vw;
+  position: relative;
+  overflow: hidden;
 }
 .container-effects {
   position: absolute;

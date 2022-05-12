@@ -11,20 +11,26 @@
 .container-effects {
   position: absolute;
 }
+
 .container-effects .raw {
   top: -800px;
   position: relative;
   width: 100%;
   display: flex;
-  padding: 1.5rem 0px;
-  font-size: 3rem;
+  padding: 2rem 0px;
+  font-size: 4rem;
   white-space: nowrap;
   cursor: default;
   transform: rotate(-45deg);
   z-index: 1;
   flex-direction: column;
 }
-
+@media (max-width:800px) {
+  .container-effects-with-button .raw{
+    font-size: 3rem;
+    padding: 1.5rem;
+  }  
+}
 .container-effects .raw i {
   color: rgba(255, 255, 255, 0.5);
   transition: 0.2s;
@@ -112,7 +118,7 @@
   height: 250px;
   color: white;
   border-radius: 50%;
-  background-image: url("img/yo.jpg");
+  background-image: url("../img/yo.jpg");
   background-size: cover;
   z-index: 120;
   border: solid 10px black;
@@ -158,3 +164,4 @@
   text-align: left;
   text-decoration: none;
 }
+

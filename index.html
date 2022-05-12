@@ -7,16 +7,16 @@
     rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="cajaflotante.css" type="text/css" />
+  <link rel="stylesheet" href="CSS/cajaflotante.css" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caja flotante CSS3</title>
+  <title>Inicio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="knowledge.css" />
+  <link rel="stylesheet" href="CSS/knowledge.css" />
 </head>
 
 <body>
@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active current color" aria-current="page" href="#" id="idnav1">Home</a>
+            <a class="nav-link active color current" aria-current="page" href="#" id="idnav1">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active color" href="#" id="navbarDropdownMenuLink" role="button"
@@ -56,8 +56,8 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active color" href="#" id="navbarDropdownMenuLink1" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">Web Design</a>
+            <a class="nav-link dropdown-toggle active color" href="pages/proyectos.html" id="navbarDropdownMenuLink1" role="button"
+               aria-expanded="false">Projects</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink1">
               <li>
                 <a class="dropdown-item" href="ejercicios/login.html">Motocicletas</a>
@@ -68,7 +68,7 @@
             </ul>
           </li>
           <li class="nav-item color" id="contacto">
-            <a class="nav-link active" aria-current="page" href="contacto.html">Contact</a>
+            <a class="nav-link active" aria-current="page" href="pages/contacto.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -106,9 +106,6 @@
     <p class="me-auto m-2 p-2 bd-highlight text-muted logo">Megic</p>
     <ul class="nav justify-content-end">
       <li class="nav-item p-1 bd-highlight">
-        <a href="index.html" class="nav-link text-muted">Home</a>
-      </li>
-      <li class="nav-item p-1 bd-highlight">
         <a href="#" class="nav-link text-muted">Web Design</a>
       </li>
       <li class="nav-item p-1 bd-highlight">
@@ -122,11 +119,10 @@
     </ul>
   </footer>
   <script src="https://kit.fontawesome.com/7d370298ef.js" crossorigin="anonymous"></script>
-  <script type="script" src="letter.js"></script>
-  <script src="particles.min.js"></script>
-  <script src="particles.js"></script>
-  <script src="main.js"></script>
-  <script src="letter.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/letter.js"></script>
   <script>
     const backgroundElement = document.getElementById("background-effects");
 
@@ -150,17 +146,18 @@
         <i class="fa-regular fa-thumbs-up"></i>
         <i class="fa-regular fa-hand-peace"></i>`;
 
-    const factorRepeticion = screen.availWidth / 50;
+    const factorRepeticion = screen.availWidth;
     const factorRepeticionIconos = 5;
     let rowsIcons = "<div class='raw'>";
     let rowIcon = "<div>";
+    let refactorRepeticion = (factorRepeticion >= 1280) ? 30 : 20;
     for (let i = 0; i < factorRepeticionIconos; i++) {
       rowIcon += `${rowOnlyIcons}`;
     }
     rowIcon += "</div>";
     rowsIcons += `${rowIcon}${rowIcon}</div>`;
     let rawRowsIcons = "";
-    for (let i = 0; i < factorRepeticion; i++) {
+    for (let i = 0; i < refactorRepeticion; i++) {
       rawRowsIcons += rowsIcons;
     }
     backgroundElement.innerHTML = rawRowsIcons;

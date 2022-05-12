@@ -1,0 +1,69 @@
+@import url('https://fonts.google.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+body{
+    background: #eee;
+}
+.contenedor{
+    height: 100vh;
+    display: flex;
+    align-items:center;
+}
+
+.cardo{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background-color: black;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .1) ;
+    flex:1;
+    margin: 0 1rem;
+    display: flex;
+
+}
+.cardo:hover{
+    width: 600px;
+}
+.cardo .imgbx{
+ position: relative;
+ min-width: 300px;
+ height: 100%;
+ background-color: #eee;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+.cardo .imgbx img{
+    max-width: 150px;
+    transition: .5s ease-in-out;
+}
+
+.cardo:hover .imgbx img{
+    transform: scale(1.1);
+}
+
+.cardo .details{
+    position: relative;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(to left,#ff0000, #f0743c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.cardo .details::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+}

@@ -69,19 +69,19 @@
   justify-content: center; align-items: center;"> -->
   <div class="caja-login-container">
     <div class="caja-login bg-body" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
-      <form>
+      <form action="https://formspree.io/f/mvoldqob" method="POST">
         <h2 class="fw-bold text-center mb-3 logo">Megic</h2>
         <div class="mb-3">
           <label class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="Name" placeholder="Nombre">
+          <input type="text" class="form-control" id="Name" name="name" placeholder="Nombre">
         </div>
         <div class="mb-3">
           <label for="" class="form-label">Correo</label>
-          <input type="email" class="form-control" placeholder="mago@megic.dev">
+          <input type="email" class="form-control" name="email" placeholder="mago@megic.dev">
         </div>
         <div>
           <label class="form-label">Mensaje</label>
-          <textarea maxlength="150" class="form-control" id="mytextarea" placeholder="Mensaje..."></textarea>
+          <textarea maxlength="150" class="form-control" name="message" id="mytextarea" placeholder="Mensaje..."></textarea>
           <span>Characters left: </span><span id="counter">150</span><span>/150</span>
         </div>
         <button type="submit" class="boton w-100 my-2">Enviar</button>

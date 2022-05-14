@@ -97,7 +97,7 @@
   align-items: center;
   font-family: "Montserrat", sans-serif;
   display: flex;
-  z-index: 1100;
+  z-index: 2000;
 }
 
 .display-active {
@@ -113,9 +113,22 @@
   background: linear-gradient(to bottom, #ff0000, #f0743c);
   border-radius: 20px;
 }
+/* .img{
+    position: absolute;
+  
+  width: 230px;
+  height: 230px;
+  z-index: 2001;
+  background-image: url(img/yo.jpg);
+  object-fit: cover;
+
+} */
 .img {
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
+  position: relative;
+  top: -18px;
+  left: -25px;
   color: white;
   border-radius: 50%;
   background-image: url("../img/yo.jpg");
@@ -123,6 +136,55 @@
   z-index: 120;
   border: solid 10px black;
 }
+.img-content{
+  position: absolute;
+  inset: 30px;
+  border: 6px solid #070a1c;
+  border-radius:50%;
+  z-index: 119;
+  overflow: hidden;
+
+    }
+.circulo{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 121;
+  overflow: hidden;
+}
+.circulo::before{
+  content: '';
+  position: absolute;
+  inset: -20px 95px;
+  background: linear-gradient(315deg, #00ccff,#d400d4);
+  transition: 0.5s;
+  animation: borde 4s linear infinite;
+  
+}
+.circulo:hover::before{
+  inset: -20px 0px;
+}
+@keyframes borde{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+  
+.circulo::after{
+  content: '';
+  position:absolute;
+  inset: 6px;
+  background: #162052;
+  border-radius: 50%;
+  z-index: 101;
+} 
+
+
 .btn-popup-close {
   display: flex;
   justify-content: center;

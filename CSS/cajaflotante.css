@@ -76,7 +76,7 @@ body {
 .bk {
   background: linear-gradient(to right, #1e4867, #529ad5);
   color: #eee;
-  z-index: 10;
+  z-index: 4;
   position: absolute;
   display: flex;
   justify-content: center;

@@ -2,27 +2,34 @@
 
 body {
   background: #eee;
+
 }
 .contenedor {
-  height: 100vh;
+  height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
+ flex-wrap: wrap;
 }
 
 .cardo {
   position: relative;
-  width: 300px;
+  width: 600px;
   height: 350px;
   background-color: black;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  margin: 0 1rem;
+  margin: 1rem 2rem;
   display: flex;
-}
 
+}
+.cardo:first-child{
+  margin-top: 5rem;
+}
+.cardo:nth-child(2){
+  margin-top: 5rem;
+}
 .cardo .imgbx {
   position: relative;
-  min-width: 300px;
   width: 100%;
   height: 100%;
   background-color: #eee;
@@ -31,22 +38,6 @@ body {
   justify-content: center;
   transition: all ease-in-out 0.4s;
 }
-.cardo:hover .imgbx {
-  width: 50%;
-}
-.cardo:hover .details {
-  width: 50%;
-  padding: 20px;
-}
-.cardo .imgbx img {
-  max-width: 150px;
-  transition: 0.5s ease-in-out;
-}
-
-.cardo:hover .imgbx img {
-  transform: scale(1.1);
-}
-
 .cardo .details {
   position: relative;
   width: 0;
@@ -61,7 +52,52 @@ body {
   flex-direction: column;
   transition: all ease-in-out 0.4s;
 }
+.cardo:hover .imgbx {
+  width: 50%;
+}
+.cardo:hover .details {
+  width: 50%;
+  padding: 20px;
+}
+.cardo .imgbx img {
+  width: 300px;
+  transition: 0.5s ease-in-out;
+}
 
+.cardo:hover .imgbx img {
+  width: 250px;
+}
+
+@media(max-width:800px){
+  .contenedor{
+    height: 100%;
+  }
+  .cardo{
+    width: 320px;
+    height: 200px;
+    margin: 1rem 0px;
+  }
+  .cardo:first-child{
+   margin-top: 1.5rem; 
+  }
+  .cardo .imgbx img{
+    width: 150px;
+  }
+  .cardo:hover .imgbx img{
+    width: 100px;
+  }
+  .cardo .details h3{
+    font-size: 16px;
+    text-align: center;
+  }
+  .cardo .details h4{
+    font-size: 12px;
+  }
+  .cardo .details p{
+    font-size: 8px;
+  }
+  
+}
 .cardo .details::before {
   content: "";
   position: absolute;
@@ -71,4 +107,17 @@ body {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid #eee;
+}
+
+.details li{
+  list-style: none;
+}
+
+.details li a{
+  text-decoration: none;
+  color: white;
+  width: 80px;
+}
+.details li a:hover{
+  color: gray;
 }

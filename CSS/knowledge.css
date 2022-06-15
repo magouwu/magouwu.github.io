@@ -112,6 +112,7 @@
   height: 350px;
   background: linear-gradient(to bottom, #ff0000, #f0743c);
   border-radius: 20px;
+ 
 }
 /* .img{
     position: absolute;
@@ -146,6 +147,7 @@
 
     }
 .circulo{
+
   position: relative;
   width: 250px;
   height: 250px;
@@ -153,6 +155,7 @@
   border-radius: 50%;
   z-index: 121;
   overflow: hidden;
+
 }
 .circulo::before{
   content: '';
@@ -214,9 +217,9 @@
   color: white;
 }
 .networks {
-  text-decoration: none;
   list-style: none;
-  padding: 0;
+  padding: 0 15px;
+  padding-top: 10px;
 }
 .duwul {
   text-align: right;
